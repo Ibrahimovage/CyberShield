@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Four Pillars - CyberShield</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #ff4242, #ffb56b, #fd7ce8, #7ffc7f, #f6ff78, #5353f7, #f75686, #7e5391);
+            padding: 20px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            animation: rainbow 5s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        header img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline;
+            font-size: 3em;
+            margin-left: 10px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #00509e;
+            outline: none;
+        }
+
+        /* Accessibility Section */
+        .accessibility {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .accessibility button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .accessibility button:hover {
+            background-color: #00509e;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #cceeff;
+            padding: 20px;
+            text-align: center;
+            color: black; /* Keep text color black */
+            font-size: 1.5em;
+        }
+
+        /* Main Section */
+        .main-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .main-section h2 {
+            color: #003366;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .main-section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+            color: #333; /* Default text color */
+        }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .categories .category {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .categories .category:hover {
+            transform: translateY(-10px);
+            outline: 3px solid #a7a7a7;
+        }
+
+        .categories img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .categories h3 {
+            margin-top: 10px;
+            color: #003366;
+        }
+
+        .categories a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .categories a:hover {
+            background-color: #00509e;
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Contrast Specific Styles */
+        .high-contrast h2,
+        .high-contrast p {
+            color: yellow; /* Yellow text for headings and general text in high contrast mode */
+        }
+
+        .category p {
+            color: black; /* Keep detailed descriptions black */
+        }
+
+        /* Keep hero section text black in high contrast mode */
+        .high-contrast .hero {
+            color: black;
+        }
+    </style>
+    <script>
+        function changeColors(bgColor, textColor) {
+            document.body.style.backgroundColor = bgColor;
+            document.body.style.color = textColor;
+
+            // Apply high contrast class
+            if (bgColor === '#000000') {
+                document.body.classList.add('high-contrast');
+            } else {
+                document.body.classList.remove('high-contrast');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Change the src below to the path of your logo image in the same folder -->
+        <img src="CyberShieldLogo.jpeg" alt="CyberLogo Logo">
+        <h1>The Four Pillars - CyberShield</h1>
+    </header>
+
+    <!-- Accessibility Options -->
+    <div class="accessibility">
+        <h2>Accessibility Options</h2>
+        <button onclick="changeColors('#ffffff', '#000000')">Default Colors</button>
+        <button onclick="changeColors('#000000', '#ffffff')">High Contrast</button>
+        <button onclick="changeColors('#eaeaea', '#333333')">Light Background</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="knife_crime.html">Knife Crime</a>
+        <a href="safe_social_spaces.html">Safe Social Spaces</a>
+        <a href="#resources">Helpful Resources</a>
+        <a href="#contact">Get in Touch</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Your Safety Is Our Top Priority</h2>
+        <p>In today's digital age, the challenges we face can feel overwhelming. Our mission is to provide comprehensive support and information regarding critical issues such as cyberbullying, knife crime, and the dwindling number of safe social spaces. Together, we can work towards making our communities safer and more supportive.</p>
+    </section>
+
+    <!-- Main Section with Categories -->
+    <section class="main-section">
+        <h2>Our Focus Areas</h2>
+        <p>We cover essential topics that affect our youth and communities. Explore the resources below to gain insights, learn coping strategies, and find support. Our aim is to empower you with the knowledge to tackle these challenges head-on.</p>
+
+        <!-- Categories -->
+        <div class="categories">
+            <div class="category" id="cyberbullying">
+                <img src="CyberBullyingImages.png" alt="Cyberbullying">
+                <h3>Understanding Cyberbullying</h3>
+                <p>Cyberbullying isn’t just online drama; it’s a real issue that can affect anyone. From social media to gaming platforms, learn how to spot the signs and stand up against it. Let’s make the internet a safer place together!</p>
+                <a href="http://127.0.0.1:5500/CyberShieldWebsite/Cybersecurity%20file.html">Learn More</a>
+            </div>
+
+            <div class="category" id="knifecrime">
+                <img src="KnifeCrimeImage.jpeg" alt="Knife Crime">
+                <h3>Awareness of Knife Crime</h3>
+                <p>Knife crime is a serious problem that can touch anyone's life. Understand the risks, learn how to stay safe, and find out what’s being done to tackle this issue in our communities. Knowledge is power!</p>
+                <a href="http://127.0.0.1:5500/Knife%20crime.html">Learn More</a>
+            </div>
+
+            <div class="category" id="socialspaces">
+                <img src="SocialSpaces.jpg" alt="Social Spaces">
+                <h3>Safe Social Spaces</h3>
+                <p>Discover the importance of safe spaces for our youth. Learn how to identify and create environments that promote well-being and support. Together, we can foster a sense of belonging in our communities.</p>
+                <a href="http://127.0.0.1:5500/social%20Spaces.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Four pillars - CyberShield. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
