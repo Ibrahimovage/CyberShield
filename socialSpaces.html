@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Social Spaces - CyberShield</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e7f3ff; /* Light blue for a calm background */
+            color: #222; /* Dark gray for better contrast */
+            transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #42a5f5, #0077c2); /* Bright gradient for header */
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            color: #ef6c00; /* Vibrant color for section titles */
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+            margin: 20px 0 10px;
+            text-align: left;
+            font-size: 2em;
+        }
+
+        h2:hover {
+            color: #ff9800; /* Lighter color on hover */
+            transform: scale(1.05);
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-4px); /* Slight lift effect on hover */
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1.1em; /* Slightly larger text */
+        }
+
+        a {
+            color: #ef6c00;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #d32f2f; /* Darker shade on hover */
+        }
+
+        .accessibility {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .color-button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #ef6c00;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-button:hover {
+            background-color: #d32f2f; /* Darker shade on hover */
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* High contrast styles */
+        .high-contrast {
+            background-color: black;
+            color: yellow; /* Text color for high contrast mode */
+        }
+
+        .high-contrast h2 {
+            color: yellow; /* Heading color for high contrast mode */
+        }
+
+        .high-contrast section {
+            background-color: #333; /* Dark gray for text section in high contrast */
+            color: yellow; /* Ensures text is visible */
+        }
+
+        /* Styles for color-blind accessibility */
+        .color-blind {
+            filter: contrast(1.2) brightness(1.1); /* Enhance contrast and brightness */
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Colorful section backgrounds */
+        .purple-background {
+            background-color: #9c27b0; /* Purple */
+            color: white;
+            border-radius: 12px;
+        }
+
+        .dark-blue-background {
+            background-color: #003366; /* Dark Blue */
+            color: white;
+            border-radius: 12px;
+        }
+
+        .light-green-background {
+            background-color: #c8e6c9; /* Light Green */
+            color: #333; /* Dark text for light background */
+            border-radius: 12px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em; /* Smaller header for mobile */
+            }
+
+            h2 {
+                font-size: 1.8em; /* Adjust h2 size */
+            }
+
+            section {
+                margin: 10px; /* Less margin on mobile */
+                padding: 15px; /* Less padding on mobile */
+            }
+
+            p {
+                font-size: 1em; /* Smaller paragraph text */
+            }
+
+            .color-button {
+                padding: 8px 16px; /* Smaller button size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em; /* Even smaller header for smaller devices */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Adjust h2 size */
+            }
+
+            p {
+                font-size: 0.9em; /* Smaller paragraph text */
+            }
+
+            .accessibility {
+                margin: 10px; /* Less margin on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Creating Safe Social Spaces</h1>
+    </header>
+
+    <div class="accessibility">
+        <h3>Accessibility Options</h3>
+        <button class="color-button" onclick="changeColors('default')">Default Colors</button>
+        <button class="color-button" onclick="changeColors('highContrast')">High Contrast</button>
+        <button class="color-button" onclick="changeColors('colorBlind')">Color Blind Mode</button>
+    </div>
+
+    <main>
+        <section id="communityEngagement" class="purple-background">
+            <h2>Community Engagement</h2>
+            <p>Community engagement is essential for creating safe social spaces. Initiatives like neighborhood events,
+                clean-up drives, and community gardening improve local safety and foster positive interactions among
+                residents.</p>
+            <p>Engaging youth in local programs provides ownership of their environment through sports teams, arts and
+                crafts, and leadership workshops. A well-engaged community is more vigilant and proactive in addressing
+                concerns, enhancing safety for all.</p>
+        </section>
+
+        <section id="supportNetworks" class="dark-blue-background">
+            <h2>Support Networks</h2>
+            <p>Establishing support networks is vital for individuals navigating challenging situations. Community
+                centers offer resources such as counseling, mentorship, and educational programs, serving as safe
+                havens for shared experiences.</p>
+            <p>Support groups tailored for demographics like youth or single parents foster understanding and
+                connection. These networks provide not only emotional support but also practical resources, empowering
+                individuals to improve their circumstances.</p>
+        </section>
+
+        <section id="awarenessCampaigns" class="light-green-background">
+            <h2>Awareness Campaigns</h2>
+            <p>Awareness campaigns educate communities about the importance of safe social spaces. Schools and local
+                organizations can disseminate information about resources and events that promote safety and
+                inclusivity.</p>
+            <p>Workshops and community discussions enable residents to recognize unsafe environments and advocate for
+                their rights. Effective campaigns encourage collective responsibility for maintaining safety.</p>
+        </section>
+
+        <section class="purple-background">
+            <h2>Parenting and Guidance</h2>
+            <p>Parents shape the social environments their children inhabit. Discussing the importance of safe spaces and
+                fostering open dialogue equips children to navigate their communities confidently.</p>
+            <p>Involvement in school activities and community events keeps parents informed about their children’s social
+                circles, fostering trust. Encouraging participation in positive extracurriculars steers children toward
+                environments where they can thrive.</p>
+        </section>
+
+        <section>
+            <h2>Helpful Resources</h2>
+            <ul>
+                <li><a href="https://www.nspcc.org.uk/">NSPCC - National Society for the Prevention of Cruelty to
+                    Children</a></li>
+                <li><a href="https://www.youth.gov.uk/">Youth.gov - Resources for Young People</a></li>
+                <li><a href="https://www.communityengagement.org/">Community Engagement Network</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Safe Social Spaces. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeColors(mode) {
+            const body = document.body;
+            const sections = document.querySelectorAll("section");
+            if (mode === 'highContrast') {
+                body.classList.add('high-contrast');
+            } else if (mode === 'colorBlind') {
+                body.classList.add('color-blind');
+            } else {
+                body.classList.remove('high-contrast', 'color-blind');
+            }
+
+            // Remove styles from sections when switching to default colors
+            sections.forEach(section => {
+                section.classList.remove('high-contrast', 'color-blind');
+            });
+
+            if (mode === 'colorBlind') {
+                sections.forEach(section => {
+                    section.classList.add('color-blind');
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
