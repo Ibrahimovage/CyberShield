@@ -11,17 +11,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('your-background-image.jpg') no-repeat center center fixed; /* Background image */
-            background-size: cover;
-            color: #333333;
+            background-color: #1e1e1e; /* Dark background for contrast */
+            color: #ffffff; /* Light text color for readability */
         }
 
         /* Header */
         header {
-            background: linear-gradient(90deg, rgba(255, 66, 66, 0.8), rgba(255, 181, 107, 0.8), rgba(253, 124, 232, 0.8), rgba(127, 252, 127, 0.8));
+            background: linear-gradient(90deg, #3e1a5c, #3e6a5c, #1a5c3e, #1a5c6a, #1a3e5c, #3e5c1a, #1a5c3e, #3e1a5c);
             padding: 20px;
             text-align: center;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             animation: rainbow 5s linear infinite;
         }
 
@@ -29,6 +28,7 @@
             0% {
                 background-position: 0% 50%;
             }
+
             100% {
                 background-position: 100% 50%;
             }
@@ -47,12 +47,9 @@
 
         /* Navigation */
         nav {
-            background-color: rgba(0, 51, 102, 0.8);
+            background-color: #4b0082; /* Indigo color for navigation */
             padding: 10px;
             text-align: center;
-            position: sticky;
-            top: 0; /* Sticky nav */
-            z-index: 1000; /* Stay above other elements */
         }
 
         nav a {
@@ -77,7 +74,7 @@
             padding: 10px 15px;
             margin: 0 5px;
             cursor: pointer;
-            background-color: #003366;
+            background-color: #333; /* Dark button background */
             color: white;
             border: none;
             border-radius: 5px;
@@ -85,17 +82,16 @@
         }
 
         .accessibility button:hover {
-            background-color: #00509e;
+            background-color: #555; /* Lighter button on hover */
         }
 
         /* Hero Section */
         .hero {
+            background-color: #4b0082; /* Dark purple background */
             padding: 20px;
             text-align: center;
-            color: white; /* Change to white for contrast */
+            color: white; /* Keep text color white */
             font-size: 1.5em;
-            background: rgba(204, 238, 255, 0.8); /* Light background with transparency */
-            border-radius: 10px;
         }
 
         /* Main Section */
@@ -103,10 +99,12 @@
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
+            background-color: #2c2c2c; /* Darker grey background */
+            border-radius: 10px; /* Rounded corners */
         }
 
         .main-section h2 {
-            color: #003366;
+            color: #ffb56b; /* Bright color for headings */
             font-size: 2.5em;
             text-align: center;
             margin-bottom: 20px;
@@ -116,31 +114,32 @@
             font-size: 1.2em;
             line-height: 1.8;
             text-align: center;
-            color: #333; /* Default text color */
+            color: #ffffff; /* Default text color */
         }
 
         /* Categories */
         .categories {
             display: flex;
-            flex-wrap: wrap; /* Wrap categories on smaller screens */
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
             justify-content: space-between;
             margin-top: 50px;
         }
 
         .categories .category {
-            width: 30%;
-            background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+            flex: 1 1 30%; /* Flex properties for responsiveness */
+            max-width: 30%; /* Prevent too much stretching */
+            margin: 10px; /* Add some space between categories */
+            background-color: #4b0082; /* Category background color */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s; /* Add shadow and transform on hover */
+            transition: transform 0.3s;
             text-align: center;
-            margin-bottom: 20px; /* Space between categories */
         }
 
         .categories .category:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            outline: 3px solid #a7a7a7;
         }
 
         .categories img {
@@ -150,14 +149,14 @@
 
         .categories h3 {
             margin-top: 10px;
-            color: #003366;
+            color: #ffb56b; /* Bright color for category titles */
         }
 
         .categories a {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #003366;
+            background-color: #5cb85c; /* Green background for links */
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -165,13 +164,13 @@
         }
 
         .categories a:hover {
-            background-color: #4bda5e;
+            background-color: #4bda5e; /* Lighter green on hover */
             outline: none;
         }
 
         /* Footer */
         footer {
-            background-color: rgba(0, 51, 102, 0.8);
+            background-color: #4b0082; /* Dark purple for footer */
             color: white;
             text-align: center;
             padding: 20px;
@@ -198,17 +197,6 @@
         .high-contrast .categories .category {
             background-color: #000000; /* Set category background to black */
         }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .categories .category {
-                width: 100%; /* Full width on small screens */
-            }
-
-            header h1 {
-                font-size: 2.5em; /* Smaller header size */
-            }
-        }
     </style>
     <script>
         function changeColors(bgColor, textColor) {
@@ -218,17 +206,6 @@
                 document.body.classList.remove('high-contrast'); // Remove high contrast class
             }
         }
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
     </script>
 </head>
 
@@ -269,22 +246,24 @@
         <!-- Categories -->
         <div class="categories">
             <div class="category" id="cyberbullying">
-                <img src="CyberbullyingImage.jpg" alt="Cyberbullying">
-                <h3>Cyberbullying</h3>
-                <p>Understanding the impact of cyberbullying and how to combat it.</p>
+                <img src="CyberBullyingImages.png" alt="Cyberbullying">
+                <h3>Understanding Cyberbullying</h3>
+                <p>Cyberbullying isn’t just online drama; it’s a real issue that can affect anyone. From social media to gaming platforms, learn how to spot the signs and stand up against it. Let’s make the internet a safer place together!</p>
                 <a href="http://127.0.0.1:5500/CyberShieldWebsite/Cybersecurity%20file.html">Learn More</a>
             </div>
+
             <div class="category" id="knifecrime">
-                <img src="KnifeCrimeImage.jpg" alt="Knife Crime">
-                <h3>Knife Crime</h3>
-                <p>Addressing the serious issue of knife crime in our communities.</p>
-                <a href="http://127.0.0.1:5500/Knife%20crime.html">Learn More</a>
+                <img src="KnifeCrimeImage.jpeg" alt="Knife Crime">
+                <h3>Awareness of Knife Crime</h3>
+                <p>Knife crime is a serious problem that can touch anyone's life. Understand the risks, learn how to stay safe, and discover ways to prevent it within your community.</p>
+                <a href="http://127.0.0.1:5500/CyberShieldWebsite/Cybersecurity%20file.html">Learn More</a>
             </div>
+
             <div class="category" id="socialspaces">
-                <img src="SocialSpacesImage.jpg" alt="Social Spaces">
-                <h3>Social Spaces</h3>
-                <p>Promoting safe social spaces for our youth and communities.</p>
-                <a href="http://127.0.0.1:5500/social%20Spaces.html">Learn More</a>
+                <img src="SocialSpacesImage.jpeg" alt="Social Spaces">
+                <h3>Safe Social Spaces</h3>
+                <p>In a world where online interactions are becoming the norm, the need for safe, welcoming spaces is greater than ever. Join us in creating safe havens for open dialogue and support.</p>
+                <a href="http://127.0.0.1:5500/CyberShieldWebsite/Cybersecurity%20file.html">Learn More</a>
             </div>
         </div>
     </section>
@@ -293,7 +272,6 @@
     <footer>
         <p>&copy; 2024 CyberShield. All Rights Reserved.</p>
     </footer>
-
 </body>
 
 </html>
