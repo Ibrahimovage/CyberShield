@@ -25,8 +25,12 @@
         }
 
         @keyframes rainbow {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
         }
 
         header img {
@@ -167,31 +171,29 @@
             margin-top: 40px;
         }
 
-        /* Contrast Specific Styles */
+        /* High Contrast Styles */
+        .high-contrast {
+            background-color: #000000; /* Black background for high contrast */
+            color: yellow; /* Yellow text for all elements */
+        }
+
         .high-contrast h2,
-        .high-contrast p {
-            color: yellow; /* Yellow text for headings and general text in high contrast mode */
+        .high-contrast p,
+        .high-contrast .category {
+            color: yellow; /* Ensure all text in categories is yellow */
         }
 
-        .category p {
-            color: black; /* Keep detailed descriptions black */
-        }
-
-        /* Keep hero section text black in high contrast mode */
+        /* Keep hero section text yellow in high contrast mode */
         .high-contrast .hero {
-            color: black;
+            color: yellow;
         }
     </style>
     <script>
         function changeColors(bgColor, textColor) {
-            document.body.style.backgroundColor = bgColor;
-            document.body.style.color = textColor;
-
-            // Apply high contrast class
             if (bgColor === '#000000') {
-                document.body.classList.add('high-contrast');
+                document.body.classList.add('high-contrast'); // Add high contrast class
             } else {
-                document.body.classList.remove('high-contrast');
+                document.body.classList.remove('high-contrast'); // Remove high contrast class
             }
         }
     </script>
@@ -216,7 +218,7 @@
     <div class="accessibility">
         <h2>Accessibility Options</h2>
         <button onclick="changeColors('#ffffff', '#000000')">Default Colors</button>
-        <button onclick="changeColors('#000000', '#ffffff')">High Contrast</button>
+        <button onclick="changeColors('#000000', '#000000')">High Contrast</button> <!-- Trigger high contrast -->
         <button onclick="changeColors('#eaeaea', '#333333')">Light Background</button>
     </div>
 
