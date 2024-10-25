@@ -40,24 +40,23 @@
             margin-left: 10px;
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
             background-color: #003366;
-            padding: 10px 0;
+            padding: 10px;
             text-align: center;
         }
 
         nav a {
             color: white;
-            padding: 15px 20px;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
-            transition: all 0.3s ease-in-out;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            background-color: #00509e;
-            outline: none;
+            color: #ffb56b;
         }
 
         /* Accessibility Section */
@@ -155,7 +154,7 @@
         }
 
         .categories a:hover {
-            background-color: #00509e;
+            background-color: #4bda5e;
             outline: none;
         }
 
@@ -202,10 +201,16 @@
 
     <!-- Header -->
     <header>
-        <!-- Change the src below to the path of your logo image in the same folder -->
-        <img src="CyberShieldLogo.jpeg" alt="CyberLogo Logo">
+        <img src="CyberShieldLogo.jpeg" alt="CyberShield Logo">
         <h1>The Four Pillars - CyberShield</h1>
     </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#cyberbullying">Cyberbullying</a>
+        <a href="#knifecrime">Knife Crime</a>
+        <a href="#socialspaces">Social Spaces</a>
+    </nav>
 
     <!-- Accessibility Options -->
     <div class="accessibility">
@@ -214,8 +219,6 @@
         <button onclick="changeColors('#000000', '#ffffff')">High Contrast</button>
         <button onclick="changeColors('#eaeaea', '#333333')">Light Background</button>
     </div>
-
-    
 
     <!-- Hero Section -->
     <section class="hero">
@@ -255,7 +258,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 The Four pillars - CyberShield. All rights reserved.</p>
+        <p>&copy; 2024 The Four Pillars - CyberShield. All rights reserved.</p>
     </footer>
 </body>
 
