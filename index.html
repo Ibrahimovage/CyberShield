@@ -183,9 +183,13 @@
             color: yellow; /* Ensure all text in categories is yellow */
         }
 
-        /* Keep hero section text yellow in high contrast mode */
         .high-contrast .hero {
-            color: yellow;
+            color: yellow; /* Keep hero section text yellow in high contrast mode */
+            background-color: #000000; /* Ensure hero section background is black */
+        }
+
+        .high-contrast .categories .category {
+            background-color: #000000; /* Set category background to black */
         }
     </style>
     <script>
@@ -252,15 +256,15 @@
             <div class="category" id="socialspaces">
                 <img src="SocialSpaces.jpg" alt="Social Spaces">
                 <h3>Safe Social Spaces</h3>
-                <p>Discover the importance of safe spaces for our youth. Learn how to identify and create environments that promote well-being and support. Together, we can foster a sense of belonging in our communities.</p>
-                <a href="http://127.0.0.1:5500/social%20Spaces.html">Learn More</a>
+                <p>Discover the importance of safe spaces for our youth. Learn how to identify and create environments that foster support and friendship. Together, we can ensure every individual feels safe and valued.</p>
+                <a href="http://127.0.0.1:5500/SocialSpaces.html">Learn More</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 The Four Pillars - CyberShield. All rights reserved.</p>
+        <p>&copy; 2024 CyberShield. All rights reserved.</p>
     </footer>
 </body>
 
