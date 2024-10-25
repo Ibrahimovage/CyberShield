@@ -11,13 +11,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background: url('your-background-image.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover;
             color: #333333;
         }
 
         /* Header */
         header {
-            background: linear-gradient(90deg, #ff4242, #ffb56b, #fd7ce8, #7ffc7f, #f6ff78, #5353f7, #f75686, #7e5391);
+            background: linear-gradient(90deg, rgba(255, 66, 66, 0.8), rgba(255, 181, 107, 0.8), rgba(253, 124, 232, 0.8), rgba(127, 252, 127, 0.8));
             padding: 20px;
             text-align: center;
             color: rgb(0, 0, 0);
@@ -46,9 +47,12 @@
 
         /* Navigation */
         nav {
-            background-color: #003366;
+            background-color: rgba(0, 51, 102, 0.8);
             padding: 10px;
             text-align: center;
+            position: sticky;
+            top: 0; /* Sticky nav */
+            z-index: 1000; /* Stay above other elements */
         }
 
         nav a {
@@ -86,11 +90,12 @@
 
         /* Hero Section */
         .hero {
-            background-color: #cceeff;
             padding: 20px;
             text-align: center;
-            color: black; /* Keep text color black */
+            color: white; /* Change to white for contrast */
             font-size: 1.5em;
+            background: rgba(204, 238, 255, 0.8); /* Light background with transparency */
+            border-radius: 10px;
         }
 
         /* Main Section */
@@ -117,23 +122,25 @@
         /* Categories */
         .categories {
             display: flex;
+            flex-wrap: wrap; /* Wrap categories on smaller screens */
             justify-content: space-between;
             margin-top: 50px;
         }
 
         .categories .category {
             width: 30%;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s; /* Add shadow and transform on hover */
             text-align: center;
+            margin-bottom: 20px; /* Space between categories */
         }
 
         .categories .category:hover {
             transform: translateY(-10px);
-            outline: 3px solid #a7a7a7;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .categories img {
@@ -164,7 +171,7 @@
 
         /* Footer */
         footer {
-            background-color: #003366;
+            background-color: rgba(0, 51, 102, 0.8);
             color: white;
             text-align: center;
             padding: 20px;
@@ -191,6 +198,17 @@
         .high-contrast .categories .category {
             background-color: #000000; /* Set category background to black */
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .categories .category {
+                width: 100%; /* Full width on small screens */
+            }
+
+            header h1 {
+                font-size: 2.5em; /* Smaller header size */
+            }
+        }
     </style>
     <script>
         function changeColors(bgColor, textColor) {
@@ -200,6 +218,17 @@
                 document.body.classList.remove('high-contrast'); // Remove high contrast class
             }
         }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </head>
 
@@ -240,23 +269,21 @@
         <!-- Categories -->
         <div class="categories">
             <div class="category" id="cyberbullying">
-                <img src="CyberBullyingImages.png" alt="Cyberbullying">
-                <h3>Understanding Cyberbullying</h3>
-                <p>Cyberbullying isn’t just online drama; it’s a real issue that can affect anyone. From social media to gaming platforms, learn how to spot the signs and stand up against it. Let’s make the internet a safer place together!</p>
+                <img src="CyberbullyingImage.jpg" alt="Cyberbullying">
+                <h3>Cyberbullying</h3>
+                <p>Understanding the impact of cyberbullying and how to combat it.</p>
                 <a href="http://127.0.0.1:5500/CyberShieldWebsite/Cybersecurity%20file.html">Learn More</a>
             </div>
-
             <div class="category" id="knifecrime">
-                <img src="KnifeCrimeImage.jpeg" alt="Knife Crime">
-                <h3>Awareness of Knife Crime</h3>
-                <p>Knife crime is a serious problem that can touch anyone's life. Understand the risks, learn how to stay safe, and find out what’s being done to tackle this issue in our communities. Knowledge is power!</p>
+                <img src="KnifeCrimeImage.jpg" alt="Knife Crime">
+                <h3>Knife Crime</h3>
+                <p>Addressing the serious issue of knife crime in our communities.</p>
                 <a href="http://127.0.0.1:5500/Knife%20crime.html">Learn More</a>
             </div>
-
             <div class="category" id="socialspaces">
-                <img src="SocialSpaces.jpg" alt="Social Spaces">
-                <h3>Safe Social Spaces</h3>
-                <p>Discover the importance of safe spaces for our youth. Learn how to identify and create environments that foster support and friendship. Together, we can ensure every individual feels safe and valued.</p>
+                <img src="SocialSpacesImage.jpg" alt="Social Spaces">
+                <h3>Social Spaces</h3>
+                <p>Promoting safe social spaces for our youth and communities.</p>
                 <a href="http://127.0.0.1:5500/social%20Spaces.html">Learn More</a>
             </div>
         </div>
@@ -264,8 +291,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 CyberShield. All rights reserved.</p>
+        <p>&copy; 2024 CyberShield. All Rights Reserved.</p>
     </footer>
+
 </body>
 
 </html>
