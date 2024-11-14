@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e; /* Dark background for contrast */
-            color: #ffffff; /* Light text color for readability */
+            background-color: #1e1e1e;
+            color: #ffffff;
         }
 
         /* Header */
@@ -24,39 +24,29 @@
             animation: rainbow 5s linear infinite;
         }
 
-        @keyframes rainbow {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
         header img {
-            width: 60px;
+            width: 50px;
             vertical-align: middle;
         }
 
         header h1 {
             display: inline;
-            font-size: 3em;
+            font-size: 2.5em;
             margin-left: 10px;
         }
 
         /* Navigation */
         nav {
-            background-color: #4b0082; /* Indigo color for navigation */
+            background-color: #4b0082;
             padding: 10px;
             text-align: center;
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1em;
             transition: color 0.3s;
         }
 
@@ -67,14 +57,14 @@
         /* Accessibility Section */
         .accessibility {
             text-align: center;
-            margin: 20px 0;
+            padding: 15px;
         }
 
         .accessibility button {
-            padding: 10px 15px;
+            padding: 8px 12px;
             margin: 0 5px;
             cursor: pointer;
-            background-color: #333; /* Dark button background */
+            background-color: #333;
             color: white;
             border: none;
             border-radius: 5px;
@@ -82,54 +72,54 @@
         }
 
         .accessibility button:hover {
-            background-color: #555; /* Lighter button on hover */
+            background-color: #555;
         }
 
         /* Hero Section */
         .hero {
-            background-color: #4b0082; /* Dark purple background */
-            padding: 20px;
+            background-color: #4b0082;
+            padding: 30px 15px;
             text-align: center;
-            color: white; /* Keep text color white */
-            font-size: 1.5em;
+            color: white;
+            font-size: 1.2em;
         }
 
         /* Main Section */
         .main-section {
-            padding: 50px 20px;
+            padding: 30px 20px;
             max-width: 1200px;
             margin: auto;
-            background-color: #2c2c2c; /* Darker grey background */
-            border-radius: 10px; /* Rounded corners */
+            background-color: #2c2c2c;
+            border-radius: 10px;
         }
 
         .main-section h2 {
-            color: #ffb56b; /* Bright color for headings */
-            font-size: 2.5em;
+            color: #ffb56b;
+            font-size: 2em;
             text-align: center;
             margin-bottom: 20px;
         }
 
         .main-section p {
-            font-size: 1.2em;
-            line-height: 1.8;
+            font-size: 1em;
+            line-height: 1.6;
             text-align: center;
-            color: #ffffff; /* Default text color */
+            color: #ffffff;
         }
 
         /* Categories */
         .categories {
             display: flex;
-            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-            justify-content: space-between;
-            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
         }
 
         .categories .category {
-            flex: 1 1 30%; /* Flex properties for responsiveness */
-            max-width: 30%; /* Prevent too much stretching */
-            margin: 10px; /* Add some space between categories */
-            background-color: #4b0082; /* Category background color */
+            flex: 1 1 calc(100% / 3 - 30px);
+            max-width: calc(100% / 3 - 30px);
+            background-color: #4b0082;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -149,14 +139,14 @@
 
         .categories h3 {
             margin-top: 10px;
-            color: #ffb56b; /* Bright color for category titles */
+            color: #ffb56b;
         }
 
         .categories a {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #5cb85c; /* Green background for links */
+            background-color: #5cb85c;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -164,13 +154,12 @@
         }
 
         .categories a:hover {
-            background-color: #4bda5e; /* Lighter green on hover */
-            outline: none;
+            background-color: #4bda5e;
         }
 
         /* Footer */
         footer {
-            background-color: #4b0082; /* Dark purple for footer */
+            background-color: #4b0082;
             color: white;
             text-align: center;
             padding: 20px;
@@ -179,31 +168,79 @@
 
         /* High Contrast Styles */
         .high-contrast {
-            background-color: #000000; /* Black background for high contrast */
-            color: yellow; /* Yellow text for all elements */
+            background-color: #000000;
+            color: yellow;
         }
 
         .high-contrast h2,
         .high-contrast p,
         .high-contrast .category {
-            color: yellow; /* Ensure all text in categories is yellow */
+            color: yellow;
         }
 
         .high-contrast .hero {
-            color: yellow; /* Keep hero section text yellow in high contrast mode */
-            background-color: #000000; /* Ensure hero section background is black */
+            color: yellow;
+            background-color: #000000;
         }
 
         .high-contrast .categories .category {
-            background-color: #000000; /* Set category background to black */
+            background-color: #000000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .categories .category {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .accessibility button {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            .main-section h2 {
+                font-size: 1.6em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav a {
+                font-size: 0.8em;
+                margin: 0 8px;
+            }
+
+            .categories .category {
+                padding: 15px;
+            }
+
+            .accessibility button {
+                font-size: 0.9em;
+            }
+
+            .main-section h2 {
+                font-size: 1.4em;
+            }
         }
     </style>
     <script>
         function changeColors(bgColor, textColor) {
             if (bgColor === '#000000') {
-                document.body.classList.add('high-contrast'); // Add high contrast class
+                document.body.classList.add('high-contrast');
             } else {
-                document.body.classList.remove('high-contrast'); // Remove high contrast class
+                document.body.classList.remove('high-contrast');
             }
         }
     </script>
@@ -228,7 +265,7 @@
     <div class="accessibility">
         <h2>Accessibility Options</h2>
         <button onclick="changeColors('#ffffff', '#000000')">Default Colors</button>
-        <button onclick="changeColors('#000000', '#000000')">High Contrast</button> <!-- Trigger high contrast -->
+        <button onclick="changeColors('#000000', '#000000')">High Contrast</button>
         <button onclick="changeColors('#eaeaea', '#333333')">Light Background</button>
     </div>
 
